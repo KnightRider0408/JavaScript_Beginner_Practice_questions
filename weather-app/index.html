@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="dashboard">
+        <header>
+            <h1>Global Weather</h1>
+            <p>Real-time forecasts from around the world</p>
+        </header>
+
+        <div id="loader" class="loader-container">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <div id="error-container" class="error-container hidden">
+            <div class="error-icon">⚠️</div>
+            <p id="error-message">Failed to load weather data.</p>
+            <button id="retry-btn" class="retry-btn">Try Again</button>
+        </div>
+
+        <div id="weather-cards" class="weather-cards hidden">
+            <!-- Cards will be injected here by JS -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
